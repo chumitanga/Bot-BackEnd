@@ -3,8 +3,10 @@ package be.riots.botbackend.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.stereotype.Component;
 
+import javax.persistence.Embeddable;
 import javax.validation.constraints.NotEmpty;
 
+@Embeddable
 @Component
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class GpsSensor {
