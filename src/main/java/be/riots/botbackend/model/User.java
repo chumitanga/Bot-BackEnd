@@ -1,37 +1,30 @@
 package be.riots.botbackend.model;
 
+import be.riots.botbackend.model.hardware.Device;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 
-@Entity
-@Table(name="Users")
-@Component
-@JsonIgnoreProperties(ignoreUnknown = true)
+@Document
 public class User implements Comparable<User> {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="Id")
     private int id;
 
-    @Column(name="Username")
     private String username;
 
-    @Column(name="Password")
     private String password;
 
-    @OneToMany(mappedBy = "brewer") //CASCADE TYPE???????
+    private Device device;
+
     private ArrayList<LogSession> logSessions;
 
-    @OneToMany(mappedBy = "brewer", cascade = CascadeType.REMOVE)
     ArrayList<Route> routes;
 
     public User() {
     }
-
 
     public String getUsername() {
         return username;

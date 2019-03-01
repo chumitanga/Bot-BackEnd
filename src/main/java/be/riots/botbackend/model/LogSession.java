@@ -1,31 +1,19 @@
 package be.riots.botbackend.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.springframework.stereotype.Component;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-@Entity
-@Table(name="LogSessions")
-@Component
-@JsonIgnoreProperties(ignoreUnknown = true)
+@Document
 public class LogSession {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="Id")
     private int id;
 
-    @Column
     private LocalDate date;
 
-    @OneToMany(mappedBy = "logs", cascade = CascadeType.REMOVE)
     private ArrayList<Log> logs;
 
-    @ManyToOne
-    @JoinColumn(name="CategoryId")
     private User user;
 
     public LogSession() {

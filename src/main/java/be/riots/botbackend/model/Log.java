@@ -1,38 +1,32 @@
 package be.riots.botbackend.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.springframework.stereotype.Component;
+import be.riots.botbackend.model.hardware.sensors.Camera;
+import be.riots.botbackend.model.hardware.sensors.DepthSensor;
+import be.riots.botbackend.model.hardware.sensors.GpsSensor;
+import be.riots.botbackend.model.hardware.sensors.TiltSensor;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.*;
+import java.time.LocalDateTime;
 
-@Entity
-@Table(name="Logs")
-@Component
-@JsonIgnoreProperties(ignoreUnknown = true)
+@Document
 public class Log {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="Id")
     private int id;
 
-//    @Column
-//    private LogType typeOfLog;
+    private LogType typeOfLog;
 
-    @Column
     private GpsSensor gpsSensor;
 
-    @Column
     private DepthSensor depthSensor;
 
-    @Column
-    private MotionSensor motionSensor;
+    private TiltSensor motionSensor;
 
-    @Column
+    private Camera camera;
+
     private String comment;
 
-    @ManyToOne
-    @JoinColumn(name="CategoryId")
+    private LocalDateTime dateTime;
+
     private LogSession logSession;
 
     public Log() {
@@ -46,13 +40,13 @@ public class Log {
         this.id = id;
     }
 
-//    public LogType getTypeOfLog() {
-//        return typeOfLog;
-//    }
-//
-//    public void setTypeOfLog(LogType typeOfLog) {
-//        this.typeOfLog = typeOfLog;
-//    }
+    public LogType getTypeOfLog() {
+        return typeOfLog;
+    }
+
+    public void setTypeOfLog(LogType typeOfLog) {
+        this.typeOfLog = typeOfLog;
+    }
 
     public GpsSensor getGpsSensor() {
         return gpsSensor;
@@ -70,11 +64,11 @@ public class Log {
         this.depthSensor = depthSensor;
     }
 
-    public MotionSensor getMotionSensor() {
+    public TiltSensor getMotionSensor() {
         return motionSensor;
     }
 
-    public void setMotionSensor(MotionSensor motionSensor) {
+    public void setMotionSensor(TiltSensor motionSensor) {
         this.motionSensor = motionSensor;
     }
 
@@ -92,5 +86,13 @@ public class Log {
 
     public void setLogSession(LogSession logSession) {
         this.logSession = logSession;
+    }
+
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
+    public void setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
     }
 }
