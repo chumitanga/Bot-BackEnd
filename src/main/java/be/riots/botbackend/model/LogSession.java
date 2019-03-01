@@ -21,7 +21,7 @@ public class LogSession {
     @Column
     private LocalDate date;
 
-    @OneToMany(mappedBy = "brewer", cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "logs", cascade = CascadeType.REMOVE)
     private ArrayList<Log> logs;
 
     @ManyToOne

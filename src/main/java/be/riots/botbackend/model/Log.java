@@ -16,8 +16,8 @@ public class Log {
     @Column(name="Id")
     private int id;
 
-    @Column
-    private LogType typeOfLog;
+//    @Column
+//    private LogType typeOfLog;
 
     @Column
     private GpsSensor gpsSensor;
@@ -46,13 +46,13 @@ public class Log {
         this.id = id;
     }
 
-    public LogType getTypeOfLog() {
-        return typeOfLog;
-    }
-
-    public void setTypeOfLog(LogType typeOfLog) {
-        this.typeOfLog = typeOfLog;
-    }
+//    public LogType getTypeOfLog() {
+//        return typeOfLog;
+//    }
+//
+//    public void setTypeOfLog(LogType typeOfLog) {
+//        this.typeOfLog = typeOfLog;
+//    }
 
     public GpsSensor getGpsSensor() {
         return gpsSensor;

@@ -32,12 +32,6 @@ public class User implements Comparable<User> {
     public User() {
     }
 
-    public User(String username, String password, ArrayList<LogSession> logSessions, ArrayList<Route> routes) {
-        this.username = username;
-        this.password = password;
-        this.logSessions = logSessions;
-        this.routes = routes;
-    }
 
     public String getUsername() {
         return username;

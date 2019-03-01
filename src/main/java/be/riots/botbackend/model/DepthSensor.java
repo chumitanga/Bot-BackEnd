@@ -8,7 +8,7 @@ import javax.persistence.Embeddable;
 @Embeddable
 @Component
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class DepthSensor {
+public class DepthSensor implements Sersonarble{
 
     public DepthSensor() {
     }

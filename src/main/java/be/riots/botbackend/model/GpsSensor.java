@@ -19,10 +19,6 @@ public class GpsSensor {
     public GpsSensor() {
     }
 
-    public GpsSensor(long latitude, long longitude) {
-        this.latitude = latitude;
-        this.longitude = longitude;
-    }
 
     public long getLatitude() {
         return latitude;
