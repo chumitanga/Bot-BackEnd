@@ -11,6 +11,7 @@ public class Log {
 
     @Id
     private int id;
+    private String name;
 
     private LogType typeOfLog;
     private LocalDateTime dateTime;
@@ -20,7 +21,7 @@ public class Log {
     private DistanceSensor distanceSensor;
     private GpsSensor gpsSensor;
     private LightSensor lightSensor;
-    private TiltSensor motionSensor;
+    private TiltSensor tiltSensor;
 
     private String comment;
 
@@ -101,12 +102,12 @@ public class Log {
         this.lightSensor = lightSensor;
     }
 
-    public TiltSensor getMotionSensor() {
-        return motionSensor;
+    public TiltSensor getTiltSensor() {
+        return tiltSensor;
     }
 
-    public void setMotionSensor(TiltSensor motionSensor) {
-        this.motionSensor = motionSensor;
+    public void setTiltSensor(TiltSensor tiltSensor) {
+        this.tiltSensor = tiltSensor;
     }
 
     public String getComment() {

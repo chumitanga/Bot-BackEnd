@@ -5,7 +5,15 @@ import java.math.BigDecimal;
 
 public class DistanceSensor extends Sensor implements Sensorable {
 
-    @NotEmpty
-    private BigDecimal distance;
 
+
+
+    @NotEmpty
+    private Double distance;
+
+    public DistanceSensor() {
+    }
+    public DistanceSensor(@NotEmpty Double distance) {
+        this.distance = distance;
+    }
 }

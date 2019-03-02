@@ -1,11 +1,8 @@
 package be.riots.botbackend.model;
 
 import be.riots.botbackend.model.hardware.Device;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.stereotype.Component;
 
-import javax.persistence.*;
 import java.util.ArrayList;
 
 @Document
@@ -16,6 +13,8 @@ public class User implements Comparable<User> {
     private String username;
 
     private String password;
+
+    private String email;
 
     private Device device;
 
