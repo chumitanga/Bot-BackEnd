@@ -1,9 +1,7 @@
 package be.riots.botbackend.model;
 
-import be.riots.botbackend.model.hardware.sensors.Camera;
-import be.riots.botbackend.model.hardware.sensors.DepthSensor;
-import be.riots.botbackend.model.hardware.sensors.GpsSensor;
-import be.riots.botbackend.model.hardware.sensors.TiltSensor;
+import be.riots.botbackend.model.hardware.sensors.*;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
@@ -11,21 +9,20 @@ import java.time.LocalDateTime;
 @Document
 public class Log {
 
+    @Id
     private int id;
 
     private LogType typeOfLog;
-
-    private GpsSensor gpsSensor;
-
+    private LocalDateTime dateTime;
+    private AirSensor airSensor;
+    private Camera camera;
     private DepthSensor depthSensor;
-
+    private DistanceSensor distanceSensor;
+    private GpsSensor gpsSensor;
+    private LightSensor lightSensor;
     private TiltSensor motionSensor;
 
-    private Camera camera;
-
     private String comment;
-
-    private LocalDateTime dateTime;
 
     private LogSession logSession;
 
@@ -48,12 +45,28 @@ public class Log {
         this.typeOfLog = typeOfLog;
     }
 
-    public GpsSensor getGpsSensor() {
-        return gpsSensor;
+    public LocalDateTime getDateTime() {
+        return dateTime;
     }
 
-    public void setGpsSensor(GpsSensor gpsSensor) {
-        this.gpsSensor = gpsSensor;
+    public void setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
+    }
+
+    public AirSensor getAirSensor() {
+        return airSensor;
+    }
+
+    public void setAirSensor(AirSensor airSensor) {
+        this.airSensor = airSensor;
+    }
+
+    public Camera getCamera() {
+        return camera;
+    }
+
+    public void setCamera(Camera camera) {
+        this.camera = camera;
     }
 
     public DepthSensor getDepthSensor() {
@@ -62,6 +75,30 @@ public class Log {
 
     public void setDepthSensor(DepthSensor depthSensor) {
         this.depthSensor = depthSensor;
+    }
+
+    public DistanceSensor getDistanceSensor() {
+        return distanceSensor;
+    }
+
+    public void setDistanceSensor(DistanceSensor distanceSensor) {
+        this.distanceSensor = distanceSensor;
+    }
+
+    public GpsSensor getGpsSensor() {
+        return gpsSensor;
+    }
+
+    public void setGpsSensor(GpsSensor gpsSensor) {
+        this.gpsSensor = gpsSensor;
+    }
+
+    public LightSensor getLightSensor() {
+        return lightSensor;
+    }
+
+    public void setLightSensor(LightSensor lightSensor) {
+        this.lightSensor = lightSensor;
     }
 
     public TiltSensor getMotionSensor() {
@@ -86,13 +123,5 @@ public class Log {
 
     public void setLogSession(LogSession logSession) {
         this.logSession = logSession;
-    }
-
-    public LocalDateTime getDateTime() {
-        return dateTime;
-    }
-
-    public void setDateTime(LocalDateTime dateTime) {
-        this.dateTime = dateTime;
     }
 }

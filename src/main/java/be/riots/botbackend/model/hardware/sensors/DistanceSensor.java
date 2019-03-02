@@ -8,10 +8,4 @@ public class DistanceSensor extends Sensor implements Sensorable {
     @NotEmpty
     private BigDecimal distance;
 
-    private int id;
-
-    public DistanceSensor(int id) {
-        super(id);
-        this.id = id;
-    }
 }

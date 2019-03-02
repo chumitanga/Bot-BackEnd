@@ -14,13 +14,6 @@ public class TiltSensor extends Sensor implements Sensorable {
     @NotEmpty
     private BigDecimal pitch;
 
-    private int id;
-
-    public TiltSensor(int id) {
-        super(id);
-        this.id = id;
-    }
-
     public BigDecimal getYawn() {
         return yawn;
     }
