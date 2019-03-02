@@ -1,9 +1,10 @@
 {
-  "id": "321654",
+  "id": 32111654,
+  "deviceId": 25,
 
   "logs": [
      {
-      "id": "321654101",
+      "id": 321654101,
       "typeOfLog": "BAD",
       "distanceSensor": 30.22,
       "tiltSensor": {

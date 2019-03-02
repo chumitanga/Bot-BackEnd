@@ -1,22 +1,29 @@
 package be.riots.botbackend.model;
 
+import be.riots.botbackend.model.hardware.Device;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 @Document
-public class LogSession {
+public class LogSession implements Serializable {
 
     @Id
     private int id;
+
+    @NotNull
+    private int deviceId;
 
     //private LocalDate date;
 
     private ArrayList<Log> logs;
 
    // private User user;
+
 
     public LogSession() {
     }
@@ -45,7 +52,15 @@ public class LogSession {
         this.logs = logs;
     }
 
-//    //public User getUser() {
+    public int getDeviceId() {
+        return deviceId;
+    }
+
+    public void setDeviceId(int deviceId) {
+        this.deviceId = deviceId;
+    }
+
+    //    //public User getUser() {
 //        return user;
 //    }
 //

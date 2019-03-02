@@ -11,6 +11,14 @@ public class DistanceSensor extends Sensor implements Sensorable {
     @NotEmpty
     private Double distance;
 
+    public Double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Double distance) {
+        this.distance = distance;
+    }
+
     public DistanceSensor() {
     }
     public DistanceSensor(@NotEmpty Double distance) {

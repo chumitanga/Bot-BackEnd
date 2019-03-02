@@ -1,5 +1,7 @@
 package be.riots.botbackend.model.hardware.sensors;
 
-public abstract class Sensor {
+import java.io.Serializable;
+
+public abstract class Sensor implements Serializable {
 
 }

@@ -7,4 +7,8 @@ public abstract class Device {
     public Device(int id) {
         this.id = id;
     }
+
+    public int getId() {
+        return id;
+    }
 }

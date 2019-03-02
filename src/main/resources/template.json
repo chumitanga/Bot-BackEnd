@@ -1,0 +1,68 @@
+{
+   "_id":32111654,
+   "deviceId":25,
+   "logs":[
+      {
+         "_id":321654101,
+         "typeOfLog":"BAD",
+         "distanceSensor":{
+            "distance":30.22
+         },
+         "gpsSensor":{
+            "latitude":"47.615694",
+            "longitude":"-122.3359976"
+         },
+         "tiltSensor":{
+            "yawn":"47.615694",
+            "roll":"-122.3359976",
+            "pitch":"55.666"
+         },
+         "comment":" "
+      },
+      {
+         "_id":32165402,
+         "typeOfLog":"BAD",
+         "distanceSensor":{
+            "distance":30
+         },
+         "gpsSensor":{
+            "latitude":"47.615694",
+            "longitude":"-122.3359976"
+         },
+         "comment":" "
+      },
+      {
+         "_id":321654103,
+         "typeOfLog":"GOOD",
+         "distanceSensor":{
+            "distance":30.1
+         },
+         "gpsSensor":{
+            "latitude":"47.615694",
+            "longitude":"-122.3359976"
+         },
+         "comment":" "
+      },
+      {
+         "_id":321654104,
+         "typeOfLog":"BAD",
+         "airSensor":{
+            "co2PPM":55
+         },
+         "distanceSensor":{
+            "distance":30.01
+         },
+         "gpsSensor":{
+            "latitude":"47.615694",
+            "longitude":"-122.3359976"
+         },
+         "tiltSensor":{
+            "yawn":"0.14",
+            "roll":"0.98",
+            "pitch":"0.40"
+         },
+         "comment":" "
+      }
+   ],
+   "_class":"be.riots.botbackend.model.LogSession"
+}

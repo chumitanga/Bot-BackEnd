@@ -10,4 +10,12 @@ public class AirSensor extends Sensor implements Sensorable {
     public AirSensor(@NotEmpty int co2PPM) {
         this.co2PPM = co2PPM;
     }
+
+    public int getCo2PPM() {
+        return co2PPM;
+    }
+
+    public void setCo2PPM(int co2PPM) {
+        this.co2PPM = co2PPM;
+    }
 }

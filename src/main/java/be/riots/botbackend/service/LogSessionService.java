@@ -17,20 +17,12 @@ public class LogSessionService {
     public LogSession readJsonFileWithObjectMapper() throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
         LogSession logSession = objectMapper.readValue(new File("C:\\Users\\JaSt\\Desktop\\Bot-BackEnd\\src\\main\\resources\\logsession.json"), LogSession.class);
+        writeLogSessionObjectToDatabase(logSession);
         return logSession;
     }
 
-    public void writeLogSessionObjectToDatabase() throws IOException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        LogSession logSession = objectMapper.readValue(new File("C:\\Users\\JaSt\\Desktop\\Bot-BackEnd\\src\\main\\resources\\logsession.json"), LogSession.class);
-
-        selectLogSessionById();
+    public void writeLogSessionObjectToDatabase(LogSession logSession) throws IOException {
         logSessionRepository.save(logSession);
-
     }
 
-    private void selectLogSessionById() {
-
-        //retrieve froim db??
-    }
 }
