@@ -12,7 +12,7 @@ import java.util.ArrayList;
 @Document
 public class LogSession implements Serializable {
 
-    @Id
+
     private int id;
 
     @NotNull
@@ -41,6 +41,15 @@ public class LogSession implements Serializable {
 
     public int getDeviceId() {
         return deviceId;
+    }
+
+    @Override
+    public String toString() {
+        return "LogSession{" +
+                "id=" + id +
+                ", deviceId=" + deviceId +
+                ", logs=" + logs +
+                '}';
     }
 
     public void setDeviceId(int deviceId) {

@@ -9,7 +9,6 @@ import java.time.LocalDateTime;
 @Document
 public class Log {
 
-    @Id
     private int id;
 
     private LogType typeOfLog;

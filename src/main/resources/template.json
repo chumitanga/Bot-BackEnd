@@ -1,9 +1,9 @@
 {
-   "_id":32111654,
+   "id":32111654,
    "deviceId":25,
    "logs":[
       {
-         "_id":321654101,
+         "id":321654101,
          "typeOfLog":"BAD",
          "distanceSensor":{
             "distance":30.22
@@ -20,7 +20,7 @@
          "comment":" "
       },
       {
-         "_id":32165402,
+         "id":32165402,
          "typeOfLog":"BAD",
          "distanceSensor":{
             "distance":30
@@ -32,7 +32,7 @@
          "comment":" "
       },
       {
-         "_id":321654103,
+         "id":321654103,
          "typeOfLog":"GOOD",
          "distanceSensor":{
             "distance":30.1
@@ -44,7 +44,7 @@
          "comment":" "
       },
       {
-         "_id":321654104,
+         "id":321654104,
          "typeOfLog":"BAD",
          "airSensor":{
             "co2PPM":55
@@ -64,5 +64,5 @@
          "comment":" "
       }
    ],
-   "_class":"be.riots.botbackend.model.LogSession"
+   "class":"be.riots.botbackend.model.LogSession"
 }
