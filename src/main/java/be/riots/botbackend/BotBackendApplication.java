@@ -17,13 +17,13 @@ public class BotBackendApplication {
                 SpringApplication.run(BotBackendApplication.class, args);
         LogSessionService logSessionService = applicationContext.getBean(LogSessionService.class);
 
-        try {
-           logSessionService.readJsonFileWithObjectMapper();
-       }
-       catch(IOException ioe){
-           System.out.println("Exception! Printing stack trace.");
-           ioe.printStackTrace();
-        }
+//        try {
+//           logSessionService.readJsonFileWithObjectMapper();
+//       }
+//       catch(IOException ioe){
+//           System.out.println("Exception! Printing stack trace.");
+//           ioe.printStackTrace();
+//        }
 
     }
 

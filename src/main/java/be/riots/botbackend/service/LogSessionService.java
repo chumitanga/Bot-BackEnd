@@ -14,12 +14,12 @@ public class LogSessionService {
     @Autowired
     LogSessionRepository logSessionRepository;
 
-    public LogSession readJsonFileWithObjectMapper() throws IOException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        LogSession logSession = objectMapper.readValue(new File("C:\\Users\\JaSt\\Desktop\\Bot-BackEnd\\src\\main\\resources\\logsession.json"), LogSession.class);
-        writeLogSessionObjectToDatabase(logSession);
-        return logSession;
-    }
+//    public LogSession readJsonFileWithObjectMapper() throws IOException {
+//        ObjectMapper objectMapper = new ObjectMapper();
+//        LogSession logSession = objectMapper.readValue(new File("C:\\Users\\JaSt\\Desktop\\Bot-BackEnd\\src\\main\\resources\\logsession.json"), LogSession.class);
+//        writeLogSessionObjectToDatabase(logSession);
+//        return logSession;
+//    }
 
     public void writeLogSessionObjectToDatabase(LogSession logSession) throws IOException {
         logSessionRepository.save(logSession);

@@ -18,12 +18,7 @@ public class LogSession implements Serializable {
     @NotNull
     private int deviceId;
 
-    //private LocalDate date;
-
     private ArrayList<Log> logs;
-
-   // private User user;
-
 
     public LogSession() {
     }
@@ -35,14 +30,6 @@ public class LogSession implements Serializable {
     public void setId(int id) {
         this.id = id;
     }
-
-//    public LocalDate getDate() {
-//        return date;
-//    }
-//
-//    public void setDate(LocalDate date) {
-//        this.date = date;
-//    }
 
     public ArrayList<Log> getLogs() {
         return logs;
